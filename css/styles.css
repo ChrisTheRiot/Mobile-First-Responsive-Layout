@@ -7,16 +7,18 @@
 }
 
 body {
+    font-family: 'Baskervville', serif;
     background-color: lightgrey;
 }
 
 section {
+    font-family: 'Open Sans Condensed', sans-serif;
     background-color: whitesmoke;
     width: 100%;
     display: inline-block;
 }
 
-.name-top, .name-bottom {
+.name, .name-bottom {
     color: white;
 }
 
@@ -32,7 +34,7 @@ h2, h3, p {
 
 /* Mobile-First Design */
 
-.name-top {
+.name {
     text-align: center; 
 }
 
@@ -94,6 +96,7 @@ h2, h3, p {
 }
 
 footer {
+    font-family: 'Libre Baskerville', serif;
     width: 100%;
 }
 
@@ -107,24 +110,25 @@ footer {
     text-align: center; 
     padding-bottom: 50px;
 }
+
 .name-bottom {
     width: 60%;
+    margin: 0;
     display: inline-block;
     text-align: left;
-    margin: 0;
-    font-size: 20px; 
+    font-size: 15px; 
 }
 
 .bottom-nav {
-    width: 40%;
+    width: 35%;
     display: inline-block;
-    text-align: right;
-    margin-top: 21.44px 0;
-    font-size: 20px; 
 }
 
-.nav1 {
-    margin: 21.44px 0;
+.top {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    font-size: 15px;
 }
 
 .navitem {
@@ -136,8 +140,13 @@ footer {
 /* TABLET */
 @media (min-width: 768px) {
 
+    .name {
+        text-align: center;
+    }
+
     .top-nav a {
         display: inline-block;
+        
         background-color: transparent;
         width: 10%;
     }
@@ -164,9 +173,25 @@ footer {
         padding-top: 18px;
     }
 
+    .top {
+        display: none;
+    }
+
     .navitem {
         display: inline-block;
         padding: 0 5px;
+    }
+
+    .name-bottom {
+        width: 40%;
+        display: inline-block; 
+        text-align: left;
+    }
+
+    .bottom-nav {
+        width: 40%;
+        float: right;
+        text-align: right;
     }
 
 }
@@ -174,19 +199,22 @@ footer {
 /* DESKTOP */
 @media (min-width: 1024px) {
 
+    .main-header {
+        width: 100%
+    }
+
     h1, .name-top {
         text-align: left;
         width: 40%; 
-        margin: 0;
         display: inline-block;
     }
 
     .top-nav {
         text-align: right;
-        width: 45%;
+        font-size: 20px;
+        width: 59%;
         margin: 0;
         display: inline-block;
-        padding-top: 10px;
     }
 
     .top-nav a {
@@ -205,6 +233,19 @@ footer {
         display: inline-block;
     }
 
+    .name-bottom {
+       width: 40%;
+       display: inline-block; 
+       text-align: left;
+    }
 
-    
+    .bottom-nav {
+        width: 50%;
+        float: right;
+        text-align: right;
+    }
+
+    .top {
+        display: none;
+    }    
 }
